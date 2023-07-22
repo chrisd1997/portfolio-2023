@@ -1,0 +1,22 @@
+.tag-wrapper {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: rotate(-90deg);
+  overflow: hidden;
+
+  @media(max-width: 470px) {
+    display: none;
+  }
+
+  .tag {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    animation: tag .6s ease-in-out forwards;
+    transform: translateY(-200%);
+    display: block;
+    animation-delay: .4s;
+    color: var(--color-text);
+  }
+}

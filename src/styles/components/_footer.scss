@@ -1,0 +1,46 @@
+footer {
+  padding: 100px 0 30px 0;
+  background-color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-family: 'MoolBoran', sans-serif;
+    font-size: 80px;
+    color: var(--color-white);
+    margin-top: 0;
+    letter-spacing: 4px;
+    font-weight: 300;
+    margin-bottom: 40px;
+
+    @media(max-width: 600px) {
+      font-size: 60px;
+    }
+
+    @media(max-width: 380px) {
+      font-size: 50px;
+    }
+  }
+
+  span {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    color: var(--color-white);
+    display: block;
+    margin-bottom: 50px;
+
+    @media(max-width: 380px) {
+      font-size: 14px;
+    }
+  }
+
+  .copy {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 150px;
+    font-size: 12px;
+  }
+}

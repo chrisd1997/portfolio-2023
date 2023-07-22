@@ -1,0 +1,33 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Armata&display=swap');
+
+:root {
+    --color-text: #1A1A1A;
+    --color-text-hover: #6d6d6d;
+    --color-dark: #454545;
+    --color-white: #F7F7F7;
+    --color-light: #F3F3F3;
+    --color-test: #4e53d2;
+    --color-red: #d02525;
+}
+
+// Reset
+@import 'reset';
+
+// Pages
+@import 'home/home';
+@import 'not-found/not-found';
+@import 'about/about';
+@import 'contact/contact';
+@import 'project/project';
+@import 'projects/projects';
+
+// Components
+@import 'components/nav';
+@import 'components/footer';
+@import 'components/menu';
+@import 'components/lines';
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/animations';
+@import 'components/tag';

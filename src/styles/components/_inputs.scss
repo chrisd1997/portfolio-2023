@@ -1,0 +1,22 @@
+.input-field {
+  border: 2px solid var(--color-text);
+  padding: 20px 30px;
+  outline: none;
+  -webkit-appearance: none;
+  width: 100%;
+  transition: border .2s ease-in-out;
+
+  &.error {
+    border: 2px solid var(--color-red);
+  }
+
+  &::placeholder {
+    text-transform: uppercase;
+    font-family: 'Armata', sans-serif;
+  }
+}
+
+textarea {
+  min-height: 150px;
+  resize: none;
+}

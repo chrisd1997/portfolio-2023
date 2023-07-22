@@ -1,0 +1,65 @@
+.load-text {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  display: block;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-text);
+    animation: loader .7s cubic-bezier(.27,.55,.75,.44) forwards;
+    transform: translateX(-100%);
+    animation-delay: .3s;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    animation: loaderExit .7s cubic-bezier(.27,.55,.75,.44) forwards;
+    left: 0;
+    top: 0;
+    animation-delay: .3s;
+  }
+}
+
+@keyframes loader {
+  60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes loaderExit {
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes tag {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes links {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

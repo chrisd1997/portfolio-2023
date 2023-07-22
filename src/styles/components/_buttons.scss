@@ -1,0 +1,42 @@
+.button {
+  padding: 20px 50px;
+  background-color: var(--color-text);
+  color: var(--color-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: 'Armata', sans-serif;
+  font-weight: 700;
+  transition: background-color .2s ease-in-out;
+  border: 0;
+
+  &:disabled {
+    background-color: var(--color-text-hover);
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-text-hover);
+    cursor: pointer;
+  }
+}
+
+.button-open {
+  padding: 18px 50px;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: 'Armata', sans-serif;
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-text);
+    color: var(--color-white);
+  }
+}
