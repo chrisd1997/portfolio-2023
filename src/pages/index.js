@@ -16,6 +16,8 @@ const Home = ({ content, globals, projects }) => {
             <Head>
                 <title>Chris Dekker - Software Engineer</title>
                 <meta name="description" content="Chris Dekker is a freelance software engineer and mobile app developer from the Netherlands." />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className="home">

@@ -9,6 +9,8 @@ const Projects = ({ content, projects }) => {
             <Head>
                 <title>Projects | Chris Dekker</title>
                 <meta name="description" content="Here you'll find some of my most recent projects." />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className="projects-page">

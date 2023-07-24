@@ -10,6 +10,8 @@ const About = ({ content }) => {
             <Head>
                 <title>About | Chris Dekker</title>
                 <meta name="description" content={`My name is Chris Dekker. I'm a ${Math.floor((new Date() - new Date('1997-05-01').getTime()) / 3.15576e+10)} year old software engineer & mobile app developer from The Netherlands.`} />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className="about">

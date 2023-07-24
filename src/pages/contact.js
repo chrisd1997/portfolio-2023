@@ -20,6 +20,8 @@ const Contact = ({ content, globals }) => {
             <Head>
                 <title>Contact | Chris Dekker</title>
                 <meta name="description" content="Do you fancy saying hi or would you like to ask me a question? Feel free to contact me." />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className="contact">
