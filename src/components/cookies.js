@@ -50,7 +50,7 @@ export const CookieBanner = () => {
                             <label htmlFor="strictly-necessary">Strictly Necessary</label>
                         </li>
                         <li>
-                            <input type="checkbox" id="marketing" name="marketing" checked onChange={() => setMarketing((prev) => !prev)} />
+                            <input type="checkbox" id="marketing" name="marketing" checked={marketing} onChange={() => setMarketing((prev) => !prev)} />
                             <label htmlFor="marketing">Marketing</label>
                         </li>
                     </ul>
