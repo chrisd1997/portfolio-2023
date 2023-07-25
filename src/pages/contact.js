@@ -14,6 +14,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import Head from 'next/head'
 import { GlobalContext } from '@/contexts/GlobalContext'
+import { DefaultHead } from '@/components/head'
 
 const Contact = ({ content, globals }) => {
     const { setGlobals } = useContext(GlobalContext)
@@ -27,8 +28,7 @@ const Contact = ({ content, globals }) => {
             <Head>
                 <title>Contact | Chris Dekker</title>
                 <meta name="description" content="Do you fancy saying hi or would you like to ask me a question? Feel free to contact me." />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <DefaultHead />
             </Head>
 
             <div className="contact">

@@ -9,6 +9,7 @@
   font-weight: 700;
   transition: background-color .2s ease-in-out;
   border: 0;
+  cursor: pointer;
 
   &:disabled {
     background-color: var(--color-text-hover);
@@ -20,7 +21,6 @@
 
   &:hover {
     background-color: var(--color-text-hover);
-    cursor: pointer;
   }
 }
 

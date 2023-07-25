@@ -3,6 +3,7 @@ import { Lines } from '@/components/lines'
 import Link from 'next/link'
 import Head from 'next/head'
 import { GlobalContext } from '@/contexts/GlobalContext'
+import { DefaultHead } from '@/components/head'
 
 const Projects = ({ content, projects, globals }) => {
     const { setGlobals } = useContext(GlobalContext)
@@ -16,8 +17,7 @@ const Projects = ({ content, projects, globals }) => {
             <Head>
                 <title>Projects | Chris Dekker</title>
                 <meta name="description" content="Here you'll find some of my most recent projects." />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <DefaultHead />
             </Head>
 
             <div className="projects-page">

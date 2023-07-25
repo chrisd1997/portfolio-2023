@@ -4,6 +4,7 @@ import { Button } from '@/components/button'
 import { Tag } from '@/components/tag'
 import Head from 'next/head'
 import { GlobalContext } from '@/contexts/GlobalContext'
+import { DefaultHead } from '@/components/head'
 
 const About = ({ content, globals }) => {
     const { setGlobals } = useContext(GlobalContext)
@@ -17,8 +18,7 @@ const About = ({ content, globals }) => {
             <Head>
                 <title>About | Chris Dekker</title>
                 <meta name="description" content={`My name is Chris Dekker. I'm a ${Math.floor((new Date() - new Date('1997-05-01').getTime()) / 3.15576e+10)} year old software engineer & mobile app developer from The Netherlands.`} />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <DefaultHead />
             </Head>
 
             <div className="about">
