@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import NotFound from '@/pages/404'
 import { Lines } from '@/components/lines'
 import { Button } from '@/components/button'
@@ -10,11 +10,18 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import Head from 'next/head'
+import { GlobalContext } from '@/contexts/GlobalContext'
 
-const Project = ({ content, nextProject }) => {
+const Project = ({ content, globals, nextProject }) => {
     if (content?.error || !content) {
         return <NotFound />
     }
+
+    const { setGlobals } = useContext(GlobalContext)
+
+    useEffect(() => {
+        setGlobals(globals)
+    }, [])
 
     return (
         <>
@@ -86,16 +93,18 @@ const Project = ({ content, nextProject }) => {
                     ))}
                 </section>
 
-                <div className="next">
-                    <h4>Next: {nextProject.title}</h4>
+                {nextProject && (
+                    <div className="next">
+                        <h2>Next: {nextProject.title}</h2>
 
-                    <Button
-                        style="default"
-                        text="Continue Reading"
-                        link={`/project/${nextProject.slug}`}
-                        internal={true}
-                    />
-                </div>
+                        <Button
+                            style="default"
+                            text="Continue Reading"
+                            link={`/project/${nextProject.slug}`}
+                            internal={true}
+                        />
+                    </div>
+                )}
             </div>
         </>
     )
@@ -106,6 +115,9 @@ export default Project
 export async function getServerSideProps({ params }) {
     const project = await fetch(`${process.env.API_URL}/api/project/${params.slug}.json`)
     const projectContent = await project.json()
+
+    const globals = await fetch(`${process.env.API_URL}/api/globals.json`)
+    const globalsContent = await globals.json()
 
     let nextProject = null
 
@@ -121,6 +133,7 @@ export async function getServerSideProps({ params }) {
         props: {
             content: projectContent,
             nextProject: nextProject,
+            globals: globalsContent
         }
     }
 }

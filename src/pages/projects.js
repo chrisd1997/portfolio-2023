@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Lines } from '@/components/lines'
 import Link from 'next/link'
 import Head from 'next/head'
+import { GlobalContext } from '@/contexts/GlobalContext'
 
-const Projects = ({ content, projects }) => {
+const Projects = ({ content, projects, globals }) => {
+    const { setGlobals } = useContext(GlobalContext)
+
+    useEffect(() => {
+        setGlobals(globals)
+    }, [])
+
     return (
         <>
             <Head>
@@ -17,7 +24,7 @@ const Projects = ({ content, projects }) => {
                 <Lines />
 
                 <div className="header">
-                    <h2 className="load-text">{content.header.title}</h2>
+                    <h1 className="load-text">{content.header.title}</h1>
                     <span className="load-text">{content.header.subtitle}</span>
                 </div>
 
@@ -32,7 +39,7 @@ const Projects = ({ content, projects }) => {
                                 </div>
                                 
                                 <div className="content">
-                                    <h4>{project.title}</h4>
+                                    <h2>{project.title}</h2>
 
                                     <span>
                                         {project.tags.map(
@@ -64,6 +71,9 @@ export async function getServerSideProps() {
     const res = await fetch(`${process.env.API_URL}/page/projects.json`)
     const content = await res.json()
 
+    const globals = await fetch(`${process.env.API_URL}/api/globals.json`)
+    const globalsContent = await globals.json()
+
     const projects = await fetch(`${process.env.API_URL}/api/projects.json`)
     const projectsContent = await projects.json()
 
@@ -71,6 +81,7 @@ export async function getServerSideProps() {
         props: {
             content,
             projects: projectsContent.data,
+            globals: globalsContent
         }
     }
 }

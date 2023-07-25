@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Lines } from '@/components/lines'
 import { Tag } from '@/components/tag'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,8 +13,15 @@ import {
     faLinkedinIn
 } from '@fortawesome/free-brands-svg-icons'
 import Head from 'next/head'
+import { GlobalContext } from '@/contexts/GlobalContext'
 
 const Contact = ({ content, globals }) => {
+    const { setGlobals } = useContext(GlobalContext)
+
+    useEffect(() => {
+        setGlobals(globals)
+    }, [])
+
     return (
         <>
             <Head>

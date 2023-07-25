@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Lines } from '@/components/lines'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
@@ -9,8 +9,15 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import Head from 'next/head'
 import Link from 'next/link'
+import { GlobalContext } from '@/contexts/GlobalContext'
 
 const Home = ({ content, globals, projects }) => {
+    const { setGlobals } = useContext(GlobalContext)
+
+    useEffect(() => {
+        setGlobals(globals)
+    }, [])
+
     return (
         <>
             <Head>
@@ -27,22 +34,22 @@ const Home = ({ content, globals, projects }) => {
                     <div className="links">
                         <ul>
                             <li>
-                                <a href={globals.socialLinks.stackOverflow} target="_blank" rel="nofollow noopener noreferrer">
+                                <a href={globals.socialLinks.stackOverflow} aria-label="StackOverflow" target="_blank" rel="nofollow noopener noreferrer">
                                     <FontAwesomeIcon icon={faStackOverflow} />
                                 </a>
                             </li>
                             <li>
-                                <a href={globals.socialLinks.instagram} target="_blank" rel="nofollow noopener noreferrer">
+                                <a href={globals.socialLinks.instagram} aria-label="Instagram" target="_blank" rel="nofollow noopener noreferrer">
                                     <FontAwesomeIcon icon={faInstagram} />
                                 </a>
                             </li>
                             <li>
-                                <a href={globals.socialLinks.linkedin} target="_blank" rel="nofollow noopener noreferrer">
+                                <a href={globals.socialLinks.linkedin} aria-label="LinkedIn" target="_blank" rel="nofollow noopener noreferrer">
                                     <FontAwesomeIcon icon={faLinkedin} />
                                 </a>
                             </li>
                             <li>
-                                <a href={globals.socialLinks.github} target="_blank" rel="nofollow noopener noreferrer">
+                                <a href={globals.socialLinks.github} aria-label="GitHub" target="_blank" rel="nofollow noopener noreferrer">
                                     <FontAwesomeIcon icon={faGithub} />
                                 </a>
                             </li>
@@ -80,7 +87,7 @@ const Home = ({ content, globals, projects }) => {
                                     </div>
                                     
                                     <div className="content">
-                                        <h4>{project.title}</h4>
+                                        <h3>{project.title}</h3>
                                         <span>
                                             {project.tags.map(
                                                 (value, index) => value + ((index + 1) < project.tags.length ? ' / ' : '')

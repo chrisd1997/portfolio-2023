@@ -10,17 +10,16 @@ export const Nav = ({ open, toggleNav }) => {
                 </Link>
             </span>
 
-            <span
+            <button
                 className={`nav-icon hamburger hamburger--emphatic${open ? ' is-active' : ''}`}
                 type="button"
                 onClick={() => toggleNav()}
                 aria-label="Menu"
-                aria-controls="navigation"
             >
                 <span className="hamburger-box">
                     <span className="hamburger-inner" />
                 </span>
-            </span>
+            </button>
         </nav>
     )
 }

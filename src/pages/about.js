@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Lines } from '@/components/lines'
 import { Button } from '@/components/button'
 import { Tag } from '@/components/tag'
 import Head from 'next/head'
+import { GlobalContext } from '@/contexts/GlobalContext'
 
-const About = ({ content }) => {
+const About = ({ content, globals }) => {
+    const { setGlobals } = useContext(GlobalContext)
+    
+    useEffect(() => {
+        setGlobals(globals)
+    }, [])
+
     return (
         <>
             <Head>
@@ -57,9 +64,13 @@ export async function getServerSideProps() {
     const res = await fetch(`${process.env.API_URL}/page/about.json`)
     const content = await res.json()
 
+    const globals = await fetch(`${process.env.API_URL}/api/globals.json`)
+    const globalsContent = await globals.json()
+
     return {
         props: {
             content,
+            globals: globalsContent
         }
     }
 }

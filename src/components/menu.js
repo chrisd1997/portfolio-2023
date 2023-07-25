@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faStackOverflow,
@@ -8,9 +8,11 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { GlobalContext } from '@/contexts/GlobalContext'
 
 export const Menu = ({ open, toggleNav }) => {
     const router = useRouter()
+    const { globals } = useContext(GlobalContext)
 
     return (
         <div className={`navigation${open ? ' open' : ''}`}>
@@ -24,22 +26,22 @@ export const Menu = ({ open, toggleNav }) => {
             <div className="links">
                 <ul>
                     <li>
-                        <a href="https://stackoverflow.com/users/4516934/chris?tab=profile" target="_blank" rel="nofollow noopener noreferrer">
+                        <a href={globals?.socialLinks.stackOverflow} aria-label="StackOverflow" target="_blank" rel="nofollow noopener noreferrer">
                             <FontAwesomeIcon icon={faStackOverflow} />
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/cwdekker/" target="_blank" rel="nofollow noopener noreferrer">
+                        <a href={globals?.socialLinks.instagram} aria-label="Instagram" target="_blank" rel="nofollow noopener noreferrer">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/dekkerchris/" target="_blank" rel="nofollow noopener noreferrer">
+                        <a href={globals?.socialLinks.linkedin} aria-label="LinkedIn" target="_blank" rel="nofollow noopener noreferrer">
                             <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/chrisd1997" target="_blank" rel="nofollow noopener noreferrer">
+                        <a href={globals?.socialLinks.github} aria-label="GitHub" target="_blank" rel="nofollow noopener noreferrer">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                     </li>
