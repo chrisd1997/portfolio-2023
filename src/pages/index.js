@@ -77,7 +77,7 @@ const Home = ({ content, globals, projects }) => {
                     </div>
 
                     <div className="projects-wrapper">
-                        {projects.map((project, index) => (
+                        {[...projects].slice(0, 4).map((project, index) => (
                             <div className="project" key={index}>
                                 <div className="background" style={{backgroundColor: project.color}} />
 
