@@ -38,7 +38,7 @@ const Contact = ({ content, globals }) => {
 
                 <div className="contact-inner">
                     <h1 className="load-text">{content.header.title}</h1>
-                    <p className="load-text">{content.header.subtitle}</p>
+                    <p className="load-text" dangerouslySetInnerHTML={{ __html: content.header.subtitle }} />
 
                     <div className="form-wrapper">
                         <div className="channels">
