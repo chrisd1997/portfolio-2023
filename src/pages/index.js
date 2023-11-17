@@ -58,7 +58,7 @@ const Home = ({ content, globals, projects }) => {
 
                     <div className="header-content">
                         <h1 className="load-text">{content.header.title}</h1>
-                        <span className="load-text">{content.header.subtitle}</span>
+                        <span className="load-text" dangerouslySetInnerHTML={{ __html: content.header.subtitle }} />
                     </div>
 
                     <div className="image" style={{ backgroundImage: `url('${content.homepageImage}')` }} />
