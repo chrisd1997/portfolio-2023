@@ -12,6 +12,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { GlobalContext } from '@/contexts/GlobalContext'
 import { DefaultHead } from '@/components/head'
+import globalsData from '@/data/globals.json'
+import projectsData from '@/data/projects.json'
 
 const Project = ({ content, globals, nextProject }) => {
     if (content?.error || !content) {
@@ -112,28 +114,22 @@ const Project = ({ content, globals, nextProject }) => {
 
 export default Project
 
-export async function getServerSideProps({ params }) {
-    const project = await fetch(`${process.env.API_URL}/api/project/${params.slug}.json`)
-    const projectContent = await project.json()
-
-    const globals = await fetch(`${process.env.API_URL}/api/globals.json`)
-    const globalsContent = await globals.json()
-
-    let nextProject = null
-
-    if (projectContent) {
-        const projectsFetch = await fetch(`${process.env.API_URL}/api/projects.json`)
-        const projects = await projectsFetch.json()
-        const projectsArray = projects.data
-        const randomProject = Math.floor(Math.random() * projectsArray.length - 1)
-        nextProject = [...projectsArray].filter(project => project.slug !== params.slug)[randomProject]
+export async function getStaticPaths() {
+    return {
+        paths: projectsData.map(project => ({ params: { slug: project.slug } })),
+        fallback: false,
     }
+}
+
+export async function getStaticProps({ params }) {
+    const index = projectsData.findIndex(project => project.slug === params.slug)
 
     return {
         props: {
-            content: projectContent,
-            nextProject: nextProject,
-            globals: globalsContent
+            content: projectsData[index],
+            // The next project in the list, wrapping around to the first
+            nextProject: projectsData[(index + 1) % projectsData.length],
+            globals: globalsData,
         }
     }
 }

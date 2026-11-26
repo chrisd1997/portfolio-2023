@@ -1,0 +1,16 @@
+{
+  "socialLinks": {
+    "stackOverflow": "https://stackoverflow.com/users/4516934/chris?tab=profile",
+    "github": "https://github.com/chrisd1997",
+    "linkedin": "https://www.linkedin.com/in/cwdekker/",
+    "instagram": "https://www.instagram.com/cwdekker/",
+    "phone": "tel:+31616021710",
+    "email": "mailto:hi@cwdekker.com"
+  },
+  "footer": {
+    "title": "Let's talk!",
+    "subtitle": "I am available for freelance work.",
+    "buttonText": "Contact Me",
+    "buttonDestination": "contact"
+  }
+}

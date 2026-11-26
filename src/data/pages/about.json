@@ -1,0 +1,11 @@
+{
+  "title": "About",
+  "slug": "about",
+  "header": {
+    "title": "Hey there, I'm Chris.",
+    "subtitle": "A freelance web developer and software engineer."
+  },
+  "aboutContent": "<p>Hey, I'm Chris Dekker. I'm %age% and work as a software engineer and mobile app developer in The Netherlands. I've been into programming since I built my first website at 14. With over 8 years of experience in web development and DevOps, I'm always up for a new challenge. I enjoy blending work with travel, meeting new people, and diving into new learning experiences. If that sounds like a match, let's connect and create something awesome together!</p>",
+  "aboutImage": "/uploads/chris.jpeg",
+  "resumeFile": "/uploads/Curriculum-Vitae_2024-03-03-210422_xods.pdf"
+}

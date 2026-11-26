@@ -5,6 +5,8 @@ import { Tag } from '@/components/tag'
 import Head from 'next/head'
 import { GlobalContext } from '@/contexts/GlobalContext'
 import { DefaultHead } from '@/components/head'
+import aboutData from '@/data/pages/about.json'
+import globalsData from '@/data/globals.json'
 
 const About = ({ content, globals }) => {
     const { setGlobals } = useContext(GlobalContext)
@@ -60,17 +62,11 @@ const About = ({ content, globals }) => {
 
 export default About
 
-export async function getServerSideProps() {
-    const res = await fetch(`${process.env.API_URL}/page/about.json`)
-    const content = await res.json()
-
-    const globals = await fetch(`${process.env.API_URL}/api/globals.json`)
-    const globalsContent = await globals.json()
-
+export async function getStaticProps() {
     return {
         props: {
-            content,
-            globals: globalsContent
+            content: aboutData,
+            globals: globalsData
         }
     }
 }

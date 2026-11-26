@@ -1,0 +1,11 @@
+{
+  "title": "Homepage",
+  "slug": "homepage",
+  "header": {
+    "title": "Chris Dekker",
+    "subtitle": "Freelance Web Developer<br> & Software Engineer"
+  },
+  "homepageImage": "/uploads/07.png",
+  "projectsSubtitle": "These are some of my most recent projects.",
+  "projectsTitle": "The latest"
+}

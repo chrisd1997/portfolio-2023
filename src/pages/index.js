@@ -11,6 +11,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { GlobalContext } from '@/contexts/GlobalContext'
 import { DefaultHead } from '@/components/head'
+import homepageData from '@/data/pages/homepage.json'
+import globalsData from '@/data/globals.json'
+import projectsData from '@/data/projects.json'
 
 const Home = ({ content, globals, projects }) => {
     const { setGlobals } = useContext(GlobalContext)
@@ -115,21 +118,12 @@ const Home = ({ content, globals, projects }) => {
 
 export default Home
 
-export async function getServerSideProps() {
-    const res = await fetch(`${process.env.API_URL}/page/homepage.json`)
-    const content = await res.json()
-
-    const globals = await fetch(`${process.env.API_URL}/api/globals.json`)
-    const globalsContent = await globals.json()
-
-    const projects = await fetch(`${process.env.API_URL}/api/projects.json`)
-    const projectsContent = await projects.json()
-
+export async function getStaticProps() {
     return {
         props: {
-            content,
-            globals: globalsContent,
-            projects: projectsContent.data,
+            content: homepageData,
+            globals: globalsData,
+            projects: projectsData,
         }
     }
 }

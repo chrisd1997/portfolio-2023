@@ -1,0 +1,129 @@
+[
+  {
+    "title": "Westerparkstaete app",
+    "slug": "westerparkstaete-app",
+    "color": "#84cbe4",
+    "tags": [
+      "App",
+      "Dashboard",
+      "Registration column"
+    ],
+    "images": [
+      "/uploads/portfolio-cw-dekker-westerparkstaete-case-study-3.jpg",
+      "/uploads/portfolio-cw-dekker-westerparkstaete-case-study-4_2023-07-25-105330_zhgw.jpg",
+      "/uploads/portfolio-cw-dekker-westerparkstaete-case-study.jpg"
+    ],
+    "design": {
+      "title": "Sophie Rinsma",
+      "url": "https://studiorinsma.com"
+    },
+    "sourceCode": null,
+    "url": null,
+    "content": "<p>Westerparkstaete is an office building that houses several businesses.</p>\n<p>The owner of the building has asked me to create an app to keep track of which tenant is inside the building. The tenants can show that they're inside with the click of a button after which they'll be shown inside of the app using their business name, as well as on a special registration column where their clients can ring them to notify them that they've arrived.</p>\n<p>Using a special dashboard, admins can manage any tenant that uses the app as well as invite new tenants.</p>"
+  },
+  {
+    "title": "Krakend Hub",
+    "slug": "krakend-hub",
+    "color": "#381d68",
+    "tags": [
+      "Website"
+    ],
+    "images": [
+      "/uploads/portfolio-cw-dekker-krakend-hub-case-3.jpg",
+      "/uploads/portfolio-cw-dekker-krakend-hub-case-2.jpg",
+      "/uploads/portfolio-cw-dekker-krakend-hub-case-1-scaled-1.jpg"
+    ],
+    "design": {
+      "title": "Sophie Rinsma",
+      "url": "https://studiorinsma.com"
+    },
+    "sourceCode": null,
+    "url": null,
+    "content": "<p>Krakend Hub is a complete finance management system. It has built-in client and invoice management, automated emails for sending out reminders to your clients about forgotten invoices as well as expert graphs of your revenue stream.</p>\n<p>The system is built using a combination of the Laravel and React frameworks and numerous external API's for automation.</p>"
+  },
+  {
+    "title": "Chants.io Web & App",
+    "slug": "chants-io-web-app",
+    "color": "#8103bf",
+    "tags": [
+      "Website",
+      "App"
+    ],
+    "images": [
+      "/uploads/chants_01.jpg",
+      "/uploads/chants_02.jpg",
+      "/uploads/chants_03.png"
+    ],
+    "design": {
+      "title": "Sophie Rinsma",
+      "url": "https://studiorinsma.com"
+    },
+    "sourceCode": null,
+    "url": null,
+    "content": "<p>Chants.io is a website monitoring tool. The free monitoring app makes Chants different from all of the other monitoring tools.</p>\n<p>The website is created using the React.JS library and the use of SCSS/SASS and HTML5 while the app is created using React Native. The Lunna CMS has been implemented in the landing page for easy content management.</p>"
+  },
+  {
+    "title": "Lunna CMS",
+    "slug": "lunna-cms",
+    "color": "#e8570f",
+    "tags": [
+      "Website",
+      "CMS"
+    ],
+    "images": [
+      "/uploads/lunna_02.jpg",
+      "/uploads/lunna_03.png",
+      "/uploads/portfolio-cw-dekker-lunna-cms-case-study-4.jpg"
+    ],
+    "design": {
+      "title": "Sophie Rinsma",
+      "url": "https://studiorinsma.com"
+    },
+    "sourceCode": null,
+    "url": null,
+    "content": "<p>Lunna is a content management system (CMS) developed to make the CMS experience as simple as possible. Just the right amount of functionality and ease of use. The CMS is still used by clients of my former company.</p>\n<p>The CMS is created using the Laravel (PHP) framework and the use of SCSS/SASS, HTML5, and jQuery. It also has an SSO system implemented for easy access from admin users.</p>"
+  },
+  {
+    "title": "WRUnit.nl Website",
+    "slug": "wrunit-nl-website",
+    "color": "#dc0926",
+    "tags": [
+      "Website",
+      "Webshop",
+      "CMS"
+    ],
+    "images": [
+      "/uploads/wrunit_01.jpg",
+      "/uploads/wrunit_02.jpg",
+      "/uploads/wrunit_03.png"
+    ],
+    "design": {
+      "title": "Sophie Rinsma",
+      "url": "https://studiorinsma.com"
+    },
+    "sourceCode": null,
+    "url": null,
+    "content": "<p>WR Unit specializes in building materials and started growing in 2008 to be the successful company it is today. Upon expanding to a larger area, they also requested a new website to go along with this new environment.</p>\n<p>The website is created using the Laravel (PHP) framework and the use of SCSS/SASS, HTML5, and jQuery. The Lunna CMS has been implemented for easy content management.</p>"
+  },
+  {
+    "title": "Waddenhulp Website",
+    "slug": "waddenhulp-website",
+    "color": "#002580",
+    "tags": [
+      "Website",
+      "CMS"
+    ],
+    "images": [
+      "/uploads/waddenhulp_01.jpg",
+      "/uploads/waddenhulp_02.jpg",
+      "/uploads/waddenhulp_03.jpg"
+    ],
+    "design": {
+      "title": "Sophie Rinsma",
+      "url": "https://studiorinsma.com"
+    },
+    "sourceCode": null,
+    "url": null,
+    "content": "<p>WaddenHulp is a young team of skilled people who love to help others with their technology problems. Questions about your television, (mobile) phone, or computer, WaddenHulp is ready to help!</p>\n<p>The website is created using the Laravel (PHP) framework and the use of SCSS/SASS, HTML5, and jQuery. The Lunna CMS has been implemented for easy content management.</p>"
+  }
+]
